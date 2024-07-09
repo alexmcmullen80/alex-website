@@ -16,9 +16,9 @@ function Stock1(props){
             bg={props.bcolour}
             borderRadius='30px'
             color="white"
-            // alignItems={"center"}
-            justifyContent={"center"}
-            flexDirection={"column"}
+            alignItems="center"
+            justifyContent="center"
+            flexDirection="column"
             fontFamily="Inter"
             >
             <Text
@@ -28,12 +28,12 @@ function Stock1(props){
                     textAlign='center'
                 >{props.stock_ticker}</Text>
                     
-                <Text
-                    as="b"
-                    fontSize="10pt"
-                    margin='0px'
-                    textAlign='center'
-                >{props.message}</Text>
+            <Text
+                as="b"
+                fontSize="10pt"
+                margin='0px'
+                textAlign='center'
+            >{props.message}</Text>
 
             <Image
                 src = {props.src}
@@ -43,7 +43,7 @@ function Stock1(props){
                 margin='15px 10px 0px 10px'
                 
             />
-            <News ticker = {props.stock_ticker}></News>
+            {/* <News ticker = {props.stock_ticker}></News> */}
 
         </Flex>
     </ChakraProvider>
