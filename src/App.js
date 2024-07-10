@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React from 'react'
 import Stocks from './Stocks'
+import Logos from './Logos'
 import './App.css';
 import { ChakraProvider, Flex} from '@chakra-ui/react'
 import {Image} from '@chakra-ui/react' 
@@ -17,7 +18,8 @@ function App() {
           alignItems="center"
           >
           <Image src = {require('./title.png')}/>
-          <Stocks/> 
+          <Stocks /> 
+          <Logos />
         </Flex>
       </ChakraProvider>
     </>
