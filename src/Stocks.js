@@ -42,7 +42,7 @@ function Stocks(){
         <SimpleGrid 
           minChildWidth='450px'
           w='100%'
-          spacing = '0px'
+          spacing="auto"
           >
             {stocks.map((stock, index) => {
                 let bg_colour = "black";
