@@ -3,7 +3,7 @@ import React from 'react'
 import Stocks from './Stocks'
 import Logos from './Logos'
 import './App.css';
-import { ChakraProvider, extendTheme, Flex} from '@chakra-ui/react'
+import { ChakraProvider, Flex} from '@chakra-ui/react'
 import {Image} from '@chakra-ui/react' 
 
 
