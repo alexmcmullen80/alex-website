@@ -47,7 +47,7 @@ function Stocks(){
             {stocks.map((stock, index) => {
                 let bg_colour = "black";
                 return (
-                    <Stock1 src={require('./' + stock.stock_ticker + '.png')} stock_ticker = {stock.stock_ticker} bcolour = {bg_colour} key={index}/>
+                    <Stock1 src={require('./Pictures/' + stock.stock_ticker + '.png')} stock_ticker = {stock.stock_ticker} bcolour = {bg_colour} key={index}/>
                   );
                 })}
         </SimpleGrid>

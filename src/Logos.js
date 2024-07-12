@@ -48,7 +48,7 @@ function Logos(){
                         return (
                             <a href={logo.link}>
                                 <Image
-                                src = {require('./' + logo.name + '.png')}
+                                src = {require('./Pictures/' + logo.name + '.png')}
                                 alt=""
                                 boxSize='25px'
                                 objectFit = 'cover'

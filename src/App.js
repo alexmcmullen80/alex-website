@@ -3,8 +3,9 @@ import React from 'react'
 import Stocks from './Stocks'
 import Logos from './Logos'
 import './App.css';
-import { ChakraProvider, Flex} from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, Flex} from '@chakra-ui/react'
 import {Image} from '@chakra-ui/react' 
+
 
 
 function App() {
@@ -12,12 +13,12 @@ function App() {
     <>
       <ChakraProvider>
         <Flex 
-          bg = 'black' 
+          //bg = 'black' 
           justifyContent="center"
           flexDirection="column"
           alignItems="center"
           >
-          <Image src = {require('./title.png')}/>
+          <Image margin = '40px' src = {require('./Pictures/title.png')}/>
           <Stocks /> 
           <Logos />
         </Flex>
