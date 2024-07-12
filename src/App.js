@@ -7,17 +7,18 @@ import { ChakraProvider, Flex} from '@chakra-ui/react'
 import {Image} from '@chakra-ui/react' 
 
 
+
 function App() {
   return (
     <>
       <ChakraProvider>
         <Flex 
-          bg = 'black' 
+          //bg = 'black' 
           justifyContent="center"
           flexDirection="column"
           alignItems="center"
           >
-          <Image src = {require('./title.png')}/>
+          <Image margin = '40px' src = {require('./Pictures/title.png')}/>
           <Stocks /> 
           <Logos />
         </Flex>

@@ -13,7 +13,7 @@ function Stock1(props){
             w="450px" 
             padding="10px" 
             margin= "10px" 
-            bg={props.bcolour}
+            //bg={props.bcolour}
             borderRadius='30px'
             color="white"
             alignItems="center"
