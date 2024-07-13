@@ -13,7 +13,6 @@ function App() {
     <>
       <ChakraProvider>
         <Flex 
-          //bg = 'black' 
           justifyContent="center"
           flexDirection="column"
           alignItems="center"
