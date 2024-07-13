@@ -46,7 +46,7 @@ function Logos(){
                 <Flex alignItems="center" justifyContent="center" flexDirection="row">
                     {logos.map((logo, index) => {
                         return (
-                            <a href={logo.link}>
+                            <a href={logo.link} key={index}>
                                 <Image
                                 src = {require('./Pictures/' + logo.name + '.png')}
                                 alt=""

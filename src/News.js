@@ -1,7 +1,7 @@
 
 import { ChakraProvider } from '@chakra-ui/react';
 import {useState, useEffect} from 'react';
-//import { Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
@@ -38,23 +38,27 @@ function News(props){
         }
         var yesterday = d.getFullYear()+'-'+mm2+'-'+dd2;
         const api_key = "cq06ur1r01qkg1be72r0cq06ur1r01qkg1be72rg";
-        const api_call = "https://finnhub.io/api/v1/company-news?symbol=" + tick + "&from=" + yesterday + "&to=" + today + "&token=" + api_key + "";
+        //const api_call = "https://finnhub.io/api/v1/company-news?symbol=" + tick + "&from=" + yesterday + "&to=" + today + "&token=" + api_key + "";
+        const api_call = "https://finnhub.io/api/v1/stock/metric?symbol=" + tick + "&metric=all&token=" + api_key + "";
+        //finnhub.io/api/v1/stock/metric?symbol=AAPL&metric=all&token=cq06ur1r01qkg1be72r0cq06ur1r01qkg1be72rg
         const response = await fetch(api_call);
         const data = await response.json();
-        setNews(data);
+        setNews(data["series"]["annual"]);
     }
     getNews();
+    
   }, [props]);
+  console.log(news["pe"]["0"]["v"])
   return(
     <ChakraProvider>
-          {news.map((single_news, index) => {
+          {/* {news.map((single_news, index) => {
               return (
                   <Link key = {index} href={single_news.url} isExternal>
                     {single_news.headline} 
                     <ExternalLinkIcon mx='2px' />
-                    </Link>
+                  </Link>
                 );
-              })}
+              })} */}
     </ChakraProvider>
 
   )
