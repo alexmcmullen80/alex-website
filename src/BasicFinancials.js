@@ -2,13 +2,16 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import {useState, useEffect} from 'react';
 import { Text } from '@chakra-ui/react';
-import { Link } from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+
+
 
 function BasicFinancials(props){
 
     const [peRatio, setpeRatio] = useState([]);
+    const [psRatio, setpsRatio] = useState([]);
+    const [mktCap, setmktCap] = useState([]);
     const [divYield, setdivYield] = useState([]);
+    const [beta, setBeta] = useState([]);
     const [eps, setEPS] = useState([]);
 
 
@@ -29,10 +32,25 @@ function BasicFinancials(props){
         }else{
             setpeRatio(data["metric"]["peTTM"].toFixed(2));
         }
+        if(data["metric"]["psTTM"] == null){
+            setpsRatio("-");
+        }else{
+            setpsRatio(data["metric"]["psTTM"].toFixed(2));
+        }
+        if(data["metric"]["marketCapitalization"] == null){
+            setmktCap("-");
+        }else{
+            setmktCap(data["metric"]["marketCapitalization"].toFixed(0));
+        }
         if(data["metric"]["dividendYieldIndicatedAnnual"] == null){
             setdivYield("-");
         }else{
-            setdivYield(data["metric"]["dividendYieldIndicatedAnnual"].toFixed(2));
+            setdivYield(data["metric"]["dividendYieldIndicatedAnnual"].toFixed(2) + '%');
+        }
+        if(data["metric"]["beta"] == null){
+            setBeta("-");
+        }else{
+            setBeta(data["metric"]["beta"].toFixed(2));
         }
         if(data["metric"]["epsTTM"] == null){
             setEPS("-");
@@ -45,15 +63,28 @@ function BasicFinancials(props){
   }, [props]);
   return(
     <ChakraProvider>
-        <Text color = 'gray' fontSize='10pt' textAlign='center'>
-            P/E Ratio: {peRatio}
-        </Text>
-        <Text color = 'gray' fontSize='10pt' textAlign='center'>
-            Yield :    {divYield}
-        </Text>
-        <Text color = 'gray' fontSize='10pt' textAlign='center'>
-            EPS :    {eps}
-        </Text>
+            <table width = '80%' style = {{marginLeft: '37px'}}>
+                <tbody>
+                    <tr>
+                        <td><Text color = 'gray' fontSize='10pt' textAlign='left'>P/E</Text></td>
+                        <td width = '1%' style = {{paddingRight: '10px'}}><Text color = 'gray' fontSize='10pt' textAlign='right'>{peRatio}</Text></td>
+                        <td style = {{paddingLeft: '10px', borderLeft: '1px solid gray'}}><Text color = 'gray' fontSize='10pt' textAlign='left'>Yield</Text></td>
+                        <td><Text color = 'gray' fontSize='10pt' textAlign='right'>{divYield}</Text></td>
+                    </tr>
+                    <tr>
+                        <td><Text color = 'gray' fontSize='10pt' textAlign='left'>P/S</Text></td>
+                        <td style = {{paddingRight: '10px'}}><Text color = 'gray' fontSize='10pt' textAlign='right'>{psRatio}</Text></td>
+                        <td style = {{paddingLeft: '10px', borderLeft: '1px solid gray'}}><Text color = 'gray' fontSize='10pt' textAlign='left'>Beta</Text></td>
+                        <td><Text color = 'gray' fontSize='10pt' textAlign='right'>{beta}</Text></td>
+                    </tr>
+                    <tr>
+                        <td><Text color = 'gray' fontSize='10pt' textAlign='left'>Mkt Cap</Text></td>
+                        <td style = {{paddingRight: '10px'}}><Text color = 'gray' fontSize='10pt' textAlign='right'>{mktCap}M</Text></td>
+                        <td style = {{paddingLeft: '10px', borderLeft: '1px solid gray'}}><Text color = 'gray' fontSize='10pt' textAlign='left'>EPS</Text></td>
+                        <td><Text color = 'gray' fontSize='10pt' textAlign='right'>{eps}</Text></td>
+                    </tr>
+                </tbody>
+            </table>
     </ChakraProvider>
 
   )

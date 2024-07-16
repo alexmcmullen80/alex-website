@@ -2,7 +2,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
-import { Text } from '@chakra-ui/react';
+import { Text, Center } from '@chakra-ui/react';
 import BasicFinancials from './BasicFinancials';
 function Stock1(props){
 
@@ -41,7 +41,6 @@ function Stock1(props){
                 
             />
             <BasicFinancials ticker = {props.stock_ticker}></BasicFinancials>
-
         </Flex>
     </ChakraProvider>
     </>
