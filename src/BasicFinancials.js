@@ -86,7 +86,6 @@ function BasicFinancials(props){
                 </tbody>
             </table>
     </ChakraProvider>
-
   )
 }
 
