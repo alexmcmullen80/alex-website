@@ -19,10 +19,12 @@ function BasicFinancials(props){
     async function getBasicFinancials() { //fetch from finnhub API
 
         var tick = props.ticker;
+        const apikey = "cq06ur1r01qkg1be72r0cq06ur1r01qkg1be72rg"
         if(tick === 'XQQ'){
             tick = 'NDAQ';
         }
-        const api_call = "https://finnhub.io/api/v1/stock/metric?symbol=" + tick + "&metric=all&token=" + process.env.REACT_APP_API_KEY + "";
+        //process.env.REACT_APP_API_KEY
+        const api_call = "https://finnhub.io/api/v1/stock/metric?symbol=" + tick + "&metric=all&token=" + apikey + "";
         const response = await fetch(api_call);
         const data = await response.json();
         //console.log(data);
