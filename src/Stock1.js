@@ -2,7 +2,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
-import { Text, Center } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import BasicFinancials from './BasicFinancials';
 function Stock1(props){
 
@@ -10,7 +10,7 @@ function Stock1(props){
     <>
     <ChakraProvider>
         <Flex
-            w='400px'
+            w='350px'
             padding='10px' 
             margin= '10px'
             borderRadius='30px'
@@ -36,7 +36,7 @@ function Stock1(props){
                 src = {props.src}
                 alt='chart'
                 boxSize='350px'
-                objectFit = 'cover'
+                //objectFit = 'cover'
                 margin='15px 10px 0px 10px'
                 
             />

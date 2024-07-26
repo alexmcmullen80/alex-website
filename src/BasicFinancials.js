@@ -22,11 +22,10 @@ function BasicFinancials(props){
         if(tick === 'XQQ'){
             tick = 'NDAQ';
         }
-        const api_key = "cq06ur1r01qkg1be72r0cq06ur1r01qkg1be72rg";
-        const api_call = "https://finnhub.io/api/v1/stock/metric?symbol=" + tick + "&metric=all&token=" + api_key + "";
+        const api_call = "https://finnhub.io/api/v1/stock/metric?symbol=" + tick + "&metric=all&token=" + process.env.REACT_APP_API_KEY + "";
         const response = await fetch(api_call);
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
         if(data["metric"]["peTTM"] == null){
             setpeRatio("-");
         }else{
@@ -60,7 +59,7 @@ function BasicFinancials(props){
     }
     getBasicFinancials();
     
-  }, [props]);
+  }, [props.ticker]);
   return(
     <ChakraProvider>
             <table width = '80%' style = {{marginLeft: '37px'}}>
