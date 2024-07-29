@@ -67,10 +67,10 @@ function AboutMe(){
         <ChakraProvider>
             <SimpleGrid 
             minChildWidth='300px'
-            padding='10% 5% 20% 5%'
+            padding='10% 5% 7% 5%'
             columns={2}
             spacingX='20%'
-            backgroundColor='#3A5A40'
+            //backgroundColor='#3A5A40'
             minW='400px'
             >
                 <Flex 

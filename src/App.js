@@ -3,10 +3,22 @@ import StockModel from './StockModel';
 import AboutMe from './AboutMe';
 import { ChakraProvider, Flex } from '@chakra-ui/react'
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { useState } from 'react';
+
+
+
 
 
 
 function App() {
+  const [colour, changeColour] = useState("#3A5A40");
+  const [headercolour, changeHeaderColour] = useState("#344E41");
+  document.body.style.backgroundColor = colour;
+
+  function ColourHandler(bodyColour, headerColour){
+    changeColour(bodyColour);
+    changeHeaderColour(headerColour);
+  }
 
 
   
@@ -27,7 +39,7 @@ function App() {
           color='white'
           as="b"
           fontSize= '10pt'
-          bg='#344E41'
+          bg={headercolour}
           padding='0% 5%'
 
       >
@@ -39,11 +51,10 @@ function App() {
           //h = '100%'
           //flexDirection={{base:'column', sm: 'row', md:'row'}}
         >
-          <a href='#/stock-model'>STOCK MODEL</a>
+          <a href='#/stock-model' onClick = {() => ColourHandler('black', 'black')}>STOCK MODEL</a>
         </Flex>
-
         <Flex>
-          <a href='#/about-me'>ABOUT ME</a>
+          <a href='#/about-me' onClick={() => ColourHandler('#3A5A40', '#344E41')}>ABOUT ME</a>
         </Flex> 
           
 

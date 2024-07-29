@@ -17,7 +17,7 @@ function StockModel() {
           flexDirection="column"
           alignItems="center"
           backgroundColor='black'
-          minW='400px'
+          minW='375px'
           >
           <Image margin = '40px' src = {require('./Pictures/title.png')}/>
           <Stocks /> 
