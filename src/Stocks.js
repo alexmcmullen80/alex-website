@@ -52,6 +52,7 @@ function Stocks(){
           <SimpleGrid 
             minChildWidth='350px'
             w='100%'
+            justifyItems='center'
             >
               {stocks.map((stock, index) => {
                   return (
