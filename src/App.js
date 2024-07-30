@@ -20,7 +20,6 @@ function App() {
     changeHeaderColour(headerColour);
   }
 
-
   
   return(
     <>
@@ -54,7 +53,7 @@ function App() {
           <a href='#/stock-model' onClick = {() => ColourHandler('black', 'black')}>STOCK MODEL</a>
         </Flex>
         <Flex>
-          <a href='#/about-me' onClick={() => ColourHandler('#3A5A40', '#344E41')}>ABOUT ME</a>
+          <a href='#/about-me' onClick={() => ColourHandler('#3A5A40', '#344E41')} >ABOUT ME</a>
         </Flex> 
           
 
