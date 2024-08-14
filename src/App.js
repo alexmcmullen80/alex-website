@@ -15,10 +15,11 @@ function App() {
   const [headercolour, changeHeaderColour] = useState("#344E41");
   document.body.style.backgroundColor = colour;
 
-  function ColourHandler(bodyColour, headerColour){
+  function colourHandler(bodyColour, headerColour){
     changeColour(bodyColour);
     changeHeaderColour(headerColour);
   }
+  
 
   
   return(
@@ -50,19 +51,19 @@ function App() {
           //h = '100%'
           //flexDirection={{base:'column', sm: 'row', md:'row'}}
         >
-          <a href='#/stock-model' onClick = {() => ColourHandler('black', 'black')}>STOCK MODEL</a>
+          <a href='#/stock-model'>STOCK MODEL</a>
         </Flex>
         <Flex>
-          <a href='#/about-me' onClick={() => ColourHandler('#3A5A40', '#344E41')} >ABOUT ME</a>
+          <a href='#/about-me'>ABOUT ME</a>
         </Flex> 
           
 
       </Flex>
 
         <Routes>
-          <Route path="/" element={<AboutMe />}></Route>
-          <Route path="/about-me" element={<AboutMe />}></Route>
-          <Route path="/stock-model" element={<StockModel />}></Route>
+          <Route path="/" element={<AboutMe colourHandler = {colourHandler}/>}></Route>
+          <Route path="/about-me" element={<AboutMe colourHandler = {colourHandler}/>}></Route>
+          <Route path="/stock-model" element={<StockModel colourHandler = {colourHandler}/>}></Route>
         </Routes>
     </HashRouter>
       

@@ -2,7 +2,9 @@ import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
 import { Flex, Text , Image} from '@chakra-ui/react';
 
 
-function AboutMe(){
+function AboutMe(props){
+
+    props.colourHandler('#3A5A40', '#344E41');
     
     const skills = [
         {

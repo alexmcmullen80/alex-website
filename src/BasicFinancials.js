@@ -27,7 +27,7 @@ function BasicFinancials(props){
         const api_call = "https://finnhub.io/api/v1/stock/metric?symbol=" + tick + "&metric=all&token=" + apikey + "";
         const response = await fetch(api_call);
         const data = await response.json();
-        //console.log(data);
+        console.log(data);
         if(data["metric"]["peTTM"] == null){
             setpeRatio("-");
         }else{

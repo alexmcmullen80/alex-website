@@ -8,7 +8,8 @@ import {Image} from '@chakra-ui/react'
 
 
 
-function StockModel() {
+function StockModel(props) {
+  props.colourHandler('black', 'black');
   return (
     <>
       <ChakraProvider>
