@@ -62,7 +62,12 @@ function AboutMe(props){
         {
             name: 'R',
             link: 'https://www.r-project.org/'
+        },
+        {
+            name: 'PyTorch',
+            link: 'https://pytorch.org/'
         }
+        
     ]
 
     return(
