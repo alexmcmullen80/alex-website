@@ -2,10 +2,6 @@
 
 Welcome to my [personal website](https://www.alexmcmullen.ca/) repository! This project serves as a digital hub for showcasing my professional portfolio, sharing my personal interests, and providing an easy way to connect with me.
 
-## Features
-
-- **About Me**: Learn about my background, skills, and experiences.
-
 ## Technologies Used
   - HTML
   - CSS
