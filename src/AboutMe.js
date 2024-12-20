@@ -1,5 +1,6 @@
 import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
 import { Flex, Text , Image, Box} from '@chakra-ui/react';
+import projects from "./projects";
 
 
 function AboutMe(props){
@@ -103,6 +104,110 @@ function AboutMe(props){
                         I also love to travel, hike and play guitar!
                     </Text>
                     
+                    <Text color='white' as='b' fontSize='15pt' marginTop="5%" marginBottom="5%">
+                        Projects
+                    </Text>
+                    <SimpleGrid columns={1} spacing="20px">
+                        {projects.map((project, index) => (
+                            <a href={project.link} target="_blank">
+                            <Box
+                                key={index}
+                                position="relative"
+                                w="100%"
+                                h="auto"
+                                textAlign="center"
+                                //border="2px solid #2F855A"  // Darker border color for better contrast
+                                borderRadius="12px"  // Slightly larger border radius for a smoother look
+                                overflow="hidden"
+                                //backgroundColor="#A3D9A5" 
+                                boxShadow= '0 6px 12px rgba(0, 0, 0, 0.2)'
+                                _hover={{ 
+                                    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',  // Stronger shadow on hover for better effect
+                                    transform: 'scale(1.05)',  // Slight scaling effect on hover
+                                }}
+                                transition="transform 0.3s ease, box-shadow 0.3s ease"  // Smooth transition for hover effects
+                            >
+                                <Box
+                                    w="100%"
+                                    color="white"
+                                    fontSize="12pt"
+                                    padding="15px"
+                                    borderTopRadius="12px"  
+                                    textAlign="left"  
+                                >
+                                    <Text                                    
+                                        as='b'
+                                        fontSize='15pt'
+                                    >   
+                                        {project.name}
+                                    </Text>
+                                    <Text>
+                                        {/* Split the description by '\n' and render each part with <br /> */}
+                                        {project.description.split('\n').map((line, idx) => (
+                                        <span key={idx}>
+                                            {line}
+                                            <br />
+                                        </span>
+                                        ))}
+                                    </Text>
+                                    
+                                    <SimpleGrid minChildWidth="70px" justifyItems="center" spacing  = '15px' templateColumns="repeat(auto-fill, 50px)">
+                                        {Object.values(project.images).map((image, index) => (
+                                                <Box
+                                                    key={index}
+                                                    position="relative"
+                                                    w="70px"
+                                                    h="60px" 
+                                                    textAlign="center"
+                                                    role="group"
+                                                    overflow="hidden"
+                                                >
+                                                    
+                                                    <Image
+                                                        src={require('./Pictures/' + image + '.png')}
+                                                        alt={image}
+                                                        boxSize="30px" 
+                                                        position="absolute"
+                                                        top="50%" //centers the image vertically
+                                                        left="50%" //centers the image horizontally
+                                                        transform="translate(-50%, -50%)" //ensures the image is centered
+                                                        transition="all 0.3s ease"
+                                                        _groupHover={{
+                                                            top: '15px', //moves image to top on hover
+                                                        }}
+                                                    />
+                                                    
+                                                    <Box
+                                                        position="absolute"
+                                                        bottom="10px"
+                                                        w="100%"
+                                                        color="white"
+                                                        fontSize="12px"
+                                                        fontWeight="bold"
+                                                        opacity="0"
+                                                        transition="opacity 0.3s ease"
+                                                        _groupHover={{
+                                                            opacity: 1, //text becomes visible on hover
+                                                        }}
+                                                    >
+                                                        {image}
+                                                    </Box>
+                                                </Box>
+                                        ))}
+                                    </SimpleGrid>
+                                    
+                                </Box>
+                            
+                                
+                                    
+                            </Box>
+                            </a>
+                        ))}
+                    </SimpleGrid>
+
+
+
+                    
                 </Flex>
                 <Flex 
                     flexDirection="column"
@@ -125,7 +230,7 @@ function AboutMe(props){
                         flexDirection='row'
                         alignItems='center'
                     >
-                        <a href='https://www.linkedin.com/in/alex-mcmullen-01a8a6299/'>
+                        <a href='https://www.linkedin.com/in/alex-mcmullen-01a8a6299/' target="_blank">
                                 <Box
                                     position="relative"
                                     w="70px"
@@ -166,7 +271,7 @@ function AboutMe(props){
                                     </Box>
                                 </Box>
                         </a>
-                        <a href='https://github.com/alexmcmullen80'>
+                        <a href='https://github.com/alexmcmullen80' target="_blank">
                                 <Box
                                     position="relative"
                                     w="45px"
@@ -214,7 +319,7 @@ function AboutMe(props){
                     </Text>
                     <SimpleGrid w="75%" minChildWidth="70px" justifyItems="center">
                         {skills.map((skill, index) => (
-                            <a href={skill.link}>
+                            <a href={skill.link} target="_blank">
                                 <Box
                                     key={index}
                                     position="relative"
