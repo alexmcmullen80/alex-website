@@ -1,7 +1,7 @@
 const projects = [
     {
         name: 'ML Model Comparison for Sentiment Analysis',
-        description: 'Compared the performance of Logistic Regression, Support Vector Machines and Naive Bayes classifiers for a sentiment analysis task. \nAchieved up to 94% accuracy using adnaced preprocessing methods and optimized feature selection.',
+        description: 'Compared the performance of Logistic Regression, Support Vector Machines and Naive Bayes classifiers for a sentiment analysis task. \nAchieved up to 94% accuracy using advanced preprocessing methods and optimized feature selection.',
         images: {
             0: 'Python',
 
