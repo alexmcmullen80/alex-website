@@ -1,5 +1,5 @@
 import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
-import { Flex, Text , Image} from '@chakra-ui/react';
+import { Flex, Text , Image, Box} from '@chakra-ui/react';
 
 
 function AboutMe(props){
@@ -8,61 +8,66 @@ function AboutMe(props){
     
     const skills = [
         {
-            name: 'php',
+            name: 'PHP',
             link: 'https://www.php.net/'
         },
         {
-            name: 'mysql',
+            name: 'MySQL',
             link: 'https://www.mysql.com/'
         },
         {
-            name: 'postgreSQL',
+            name: 'PostgreSQL',
             link: 'https://www.postgresql.org/'
         },
         {
-            name: 'azure',
+            name: 'Azure',
             link: 'https://azure.microsoft.com/en-ca'
         },
         {
-            name: 'docker',
+            name: 'Docker',
             link: 'https://www.docker.com/'
         },
         {
-            name: 'git',
+            name: 'Git',
             link: 'https://git-scm.com/'
         },
         {
-            name: 'node',
+            name: 'Node',
             link: 'https://nodejs.org/en'
         },
         {
-            name: 'html',
+            name: 'HTML',
             link: 'https://html.spec.whatwg.org/'
         },
         {
-            name: 'css',
+            name: 'CSS',
             link: 'https://w3.org/Style/CSS/Overview.en.html'
         },
         {
-            name: 'javaScript',
+            name: 'JavaScript',
             link: 'https://www.javascript.com/'
         },
         {
-            name: 'react',
+            name: 'React',
             link: 'https://react.dev/'
         },
         {
-            name: 'java',
+            name: 'Java',
             link: 'https://www.java.com/en/'
         },
         {
-            name: 'python',
+            name: 'Python',
             link: 'https://www.python.org/'
         },
         {
             name: 'R',
             link: 'https://www.r-project.org/'
+        },
+        {
+            name: 'PyTorch',
+            link: 'https://pytorch.org/'
         }
+        
     ]
 
     return(
@@ -121,41 +126,143 @@ function AboutMe(props){
                         alignItems='center'
                     >
                         <a href='https://www.linkedin.com/in/alex-mcmullen-01a8a6299/'>
-                            <Image
-                            src = {require('./Pictures/linkedin.png')}
-                            boxSize='25px'
-                            objectFit = 'cover'
-                            margin='5px'
-                            />
+                                <Box
+                                    position="relative"
+                                    w="70px"
+                                    h="60px" 
+                                    textAlign="center"
+                                    role="group"
+                                    overflow="hidden"
+                                >
+                                    
+                                    <Image
+                                        src={require('./Pictures/linkedin.png')}
+                                        alt='linkedin'
+                                        boxSize="30px" 
+                                        position="absolute"
+                                        top="50%" //centers the image vertically
+                                        left="50%" //centers the image horizontally
+                                        transform="translate(-50%, -50%)" //ensures the image is centered
+                                        transition="all 0.3s ease"
+                                        _groupHover={{
+                                            top: '15px', //moves image to top on hover
+                                        }}
+                                    />
+                                    
+                                    <Box
+                                        position="absolute"
+                                        bottom="10px"
+                                        w="100%"
+                                        color="white"
+                                        fontSize="12px"
+                                        fontWeight="bold"
+                                        opacity="0"
+                                        transition="opacity 0.3s ease"
+                                        _groupHover={{
+                                            opacity: 1, //text becomes visible on hover
+                                        }}
+                                    >
+                                        LinkedIn
+                                    </Box>
+                                </Box>
                         </a>
                         <a href='https://github.com/alexmcmullen80'>
-                            <Image
-                            src = {require('./Pictures/github.png')}
-                            boxSize='30px'
-                            objectFit = 'cover'
-                            margin='5px'
-                            />
+                                <Box
+                                    position="relative"
+                                    w="45px"
+                                    h="60px" 
+                                    textAlign="center"
+                                    role="group"
+                                    overflow="hidden"
+                                >
+                                    
+                                    <Image
+                                        src={require('./Pictures/github.png')}
+                                        alt='linkedin'
+                                        boxSize="30px" // Image size adjusted to be smaller
+                                        position="absolute"
+                                        top="50%" //centers the image vertically
+                                        left="50%" //centers the image horizontally
+                                        transform="translate(-50%, -50%)" //ensures the image is centered
+                                        transition="all 0.3s ease"
+                                        _groupHover={{
+                                            top: '15px', //moves image to top on hover
+                                        }}
+                                    />
+                                    
+                                    <Box
+                                        position="absolute"
+                                        bottom="10px"
+                                        w="100%"
+                                        color="white"
+                                        fontSize="12px"
+                                        fontWeight="bold"
+                                        opacity="0"
+                                        transition="opacity 0.3s ease"
+                                        _groupHover={{
+                                            opacity: 1, //text becomes visible on hover
+                                        }}
+                                    >
+                                        GitHub
+                                    </Box>
+                                </Box>
                         </a>
+                        
                     </Flex>
                     <Text color='white' as='b' fontSize='15pt' marginTop = '5%' marginBottom='2%'>
                         Technical Skills
                     </Text>
-                    <SimpleGrid w='75%' minChildWidth='50px' justifyItems='center'>
-                        {skills.map((skill, index) => {
-                            return (
-                                <a href={skill.link} key={index}>
+                    <SimpleGrid w="75%" minChildWidth="70px" justifyItems="center">
+                        {skills.map((skill, index) => (
+                            <a href={skill.link}>
+                                <Box
+                                    key={index}
+                                    position="relative"
+                                    w="70px"
+                                    h="60px" 
+                                    textAlign="center"
+                                    role="group"
+                                    overflow="hidden"
+                                >
+                                    
                                     <Image
-                                    src = {require('./Pictures/' + skill.name + '.png')}
-                                    alt=""
-                                    boxSize='30px'
-                                    marginTop='10px'
-                                    marginBottom='10px'
-                                    key = {index}
+                                        src={require('./Pictures/' + skill.name + '.png')}
+                                        alt={skill.name}
+                                        boxSize="30px" 
+                                        position="absolute"
+                                        top="50%" //centers the image vertically
+                                        left="50%" //centers the image horizontally
+                                        transform="translate(-50%, -50%)" //ensures the image is centered
+                                        transition="all 0.3s ease"
+                                        _groupHover={{
+                                            top: '15px', //moves image to top on hover
+                                        }}
                                     />
-                                </a>
-                                );
-                            })}
+                                    
+                                    <Box
+                                        position="absolute"
+                                        bottom="10px"
+                                        w="100%"
+                                        color="white"
+                                        fontSize="12px"
+                                        fontWeight="bold"
+                                        opacity="0"
+                                        transition="opacity 0.3s ease"
+                                        _groupHover={{
+                                            opacity: 1, //text becomes visible on hover
+                                        }}
+                                    >
+                                        {skill.name}
+                                    </Box>
+                                </Box>
+                            </a>
+                        ))}
                     </SimpleGrid>
+
+
+
+
+
                 </Flex>
             </SimpleGrid>
         </ChakraProvider>
