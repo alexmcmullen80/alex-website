@@ -109,7 +109,7 @@ function AboutMe(props){
                     </Text>
                     <SimpleGrid columns={1} spacing="20px">
                         {projects.map((project, index) => (
-                            <a href={project.link} target="_blank">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer">
                             <Box
                                 key={index}
                                 position="relative"
@@ -230,7 +230,7 @@ function AboutMe(props){
                         flexDirection='row'
                         alignItems='center'
                     >
-                        <a href='https://www.linkedin.com/in/alex-mcmullen-01a8a6299/' target="_blank">
+                        <a href='https://www.linkedin.com/in/alex-mcmullen-01a8a6299/' target="_blank" rel="noopener noreferrer">
                                 <Box
                                     position="relative"
                                     w="70px"
@@ -271,7 +271,7 @@ function AboutMe(props){
                                     </Box>
                                 </Box>
                         </a>
-                        <a href='https://github.com/alexmcmullen80' target="_blank">
+                        <a href='https://github.com/alexmcmullen80' target="_blank" rel="noopener noreferrer">
                                 <Box
                                     position="relative"
                                     w="45px"
@@ -319,7 +319,7 @@ function AboutMe(props){
                     </Text>
                     <SimpleGrid w="75%" minChildWidth="70px" justifyItems="center">
                         {skills.map((skill, index) => (
-                            <a href={skill.link} target="_blank">
+                            <a href={skill.link} target="_blank" rel="noopener noreferrer">
                                 <Box
                                     key={index}
                                     position="relative"
