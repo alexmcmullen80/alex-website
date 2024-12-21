@@ -25,6 +25,10 @@ function AboutMe(props){
             link: 'https://azure.microsoft.com/en-ca'
         },
         {
+            name: 'Amplify',
+            link: 'https://aws.amazon.com/amplify/'
+        },
+        {
             name: 'Docker',
             link: 'https://www.docker.com/'
         },
@@ -116,16 +120,14 @@ function AboutMe(props){
                                 w="100%"
                                 h="auto"
                                 textAlign="center"
-                                //border="2px solid #2F855A"  // Darker border color for better contrast
-                                borderRadius="12px"  // Slightly larger border radius for a smoother look
+                                borderRadius="12px"  
                                 overflow="hidden"
-                                //backgroundColor="#A3D9A5" 
                                 boxShadow= '0 6px 12px rgba(0, 0, 0, 0.2)'
                                 _hover={{ 
-                                    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',  // Stronger shadow on hover for better effect
-                                    transform: 'scale(1.05)',  // Slight scaling effect on hover
+                                    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)', 
+                                    transform: 'scale(1.05)',  
                                 }}
-                                transition="transform 0.3s ease, box-shadow 0.3s ease"  // Smooth transition for hover effects
+                                transition="transform 0.3s ease, box-shadow 0.3s ease" 
                             >
                                 <Box
                                     w="100%"
@@ -167,6 +169,7 @@ function AboutMe(props){
                                                         src={require('./Pictures/' + image + '.png')}
                                                         alt={image}
                                                         boxSize="30px" 
+                                                        
                                                         position="absolute"
                                                         top="50%" //centers the image vertically
                                                         left="50%" //centers the image horizontally
@@ -334,6 +337,7 @@ function AboutMe(props){
                                         src={require('./Pictures/' + skill.name + '.png')}
                                         alt={skill.name}
                                         boxSize="30px" 
+                                        // objectFit={'cover'}
                                         position="absolute"
                                         top="50%" //centers the image vertically
                                         left="50%" //centers the image horizontally
