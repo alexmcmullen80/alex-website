@@ -75,7 +75,7 @@ function AboutMe(props){
         <ChakraProvider>
             <SimpleGrid 
             minChildWidth='300px'
-            padding='10% 5% 7% 5%'
+            padding='5% 5% 7% 5%'
             columns={2}
             spacingX='20%'
             //backgroundColor='#3A5A40'

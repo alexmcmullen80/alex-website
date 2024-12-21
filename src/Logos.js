@@ -6,31 +6,31 @@ import { Text } from '@chakra-ui/react'
 function Logos(){
     const logos = [
         {
-            name: 'postgreSQL',
+            name: 'PostgreSQL',
             link: 'https://www.postgresql.org/'
         },
         {
-            name: 'azure',
+            name: 'Azure',
             link: 'https://azure.microsoft.com/en-ca'
         },
         {
-            name: 'git',
+            name: 'Git',
             link: 'https://git-scm.com/'
         },
         {
-            name: 'node',
+            name: 'Node',
             link: 'https://nodejs.org/en'
         },
         {
-            name: 'javaScript',
+            name: 'JavaScript',
             link: 'https://www.javascript.com/'
         },
         {
-            name: 'react',
+            name: 'React',
             link: 'https://react.dev/'
         },
         {
-            name: 'python',
+            name: 'Python',
             link: 'https://www.python.org/'
         },
         {

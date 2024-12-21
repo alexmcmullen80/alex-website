@@ -20,7 +20,7 @@ const projects = [
             5: 'R',
 
         },
-        link: 'https://alexmcmullen80.github.io/tsx-stock-model/'
+        link: 'https://github.com/alexmcmullen80/tsx-stock-model'
     },
 ]
 export default projects;
