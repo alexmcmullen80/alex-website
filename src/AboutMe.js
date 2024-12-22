@@ -3,9 +3,10 @@ import { Flex, Text , Image, Box} from '@chakra-ui/react';
 import projects from "./projects";
 
 
-function AboutMe(props){
+// function AboutMe(props){
 
-    props.colourHandler('#3A5A40', '#344E41');
+//     props.colourHandler('#3A5A40', '#344E41');
+function AboutMe(){
     
     const skills = [
         {
@@ -77,20 +78,55 @@ function AboutMe(props){
 
     return(
         <ChakraProvider>
+            <Flex
+            w='100%'
+            //h={{base:'calc(15vh)', sm:'calc(10vh)', lg:'calc(10vh)'}}
+            h='80px'
+            minH='40px'
+            minW='400px'
+            flexDirection='row'
+            justifyContent='space-between'
+            alignItems='center'
+            color='white'
+            as="b"
+            fontSize= '10pt'
+            bg="#344E41"
+            padding='0% 5%'
+
+            >
+
+                <Flex
+                justifyContent={{base:'space-around', sm: 'space-between', md:'space-between'}}
+                alignItems='center'
+                w={{base:'30%', sm: '40%', md:'30%'}}
+                //h = '100%'
+                //flexDirection={{base:'column', sm: 'row', md:'row'}}
+                >
+                    <a href='#projects'>PROJECTS</a>
+                </Flex>
+                <Flex>
+                    <a href='#about-me'>ABOUT ME</a>
+                </Flex> 
+                
+
+            </Flex>
             <SimpleGrid 
+            
             minChildWidth='300px'
             padding='5% 5% 7% 5%'
             columns={2}
             spacingX='20%'
             //backgroundColor='#3A5A40'
             minW='400px'
+            id='about-me'
             >
                 <Flex 
                     flexDirection="column"
                     alignItems="left"
                     marginBottom='5%'
+                    
                 >
-                    <Text color='white' as='b' fontSize='15pt'>
+                    <Text color='white' as='b' fontSize='15pt' >
                         About Me
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
@@ -108,7 +144,7 @@ function AboutMe(props){
                         I also love to travel, hike and play guitar!
                     </Text>
                     
-                    <Text color='white' as='b' fontSize='15pt' marginTop="5%" marginBottom="5%">
+                    <Text color='white' as='b' fontSize='15pt' marginTop="5%" marginBottom="5%" id='projects'>
                         Projects
                     </Text>
                     <SimpleGrid columns={1} spacing="20px">
