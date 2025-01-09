@@ -355,6 +355,47 @@ function AboutMe(){
                                     </Box>
                                 </Box>
                         </a>
+                        <a href='mailto:alex88.mcmullen@gmail.com'>
+                                <Box
+                                    position="relative"
+                                    w="70px"
+                                    h="60px" 
+                                    textAlign="center"
+                                    role="group"
+                                    overflow="hidden"
+                                >
+                                    
+                                    <Image
+                                        src={require('./Pictures/Email.png')}
+                                        alt='email'
+                                        boxSize="30px" 
+                                        position="absolute"
+                                        top="50%" //centers the image vertically
+                                        left="50%" //centers the image horizontally
+                                        transform="translate(-50%, -50%)" //ensures the image is centered
+                                        transition="all 0.3s ease"
+                                        _groupHover={{
+                                            top: '15px', //moves image to top on hover
+                                        }}
+                                    />
+                                    
+                                    <Box
+                                        position="absolute"
+                                        bottom="10px"
+                                        w="100%"
+                                        color="white"
+                                        fontSize="12px"
+                                        fontWeight="bold"
+                                        opacity="0"
+                                        transition="opacity 0.3s ease"
+                                        _groupHover={{
+                                            opacity: 1, //text becomes visible on hover
+                                        }}
+                                    >
+                                        Email
+                                    </Box>
+                                </Box>
+                        </a>
                         
                     </Flex>
                     <Text color='white' as='b' fontSize='15pt' marginTop = '5%' marginBottom='2%'>
