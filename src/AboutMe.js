@@ -66,6 +66,10 @@ function AboutMe(){
             link: 'https://www.python.org/'
         },
         {
+            name: 'C++',
+            link: 'https://isocpp.org/get-started'
+        },
+        {
             name: 'R',
             link: 'https://www.r-project.org/'
         },
