@@ -76,7 +76,12 @@ function AboutMe(){
         {
             name: 'PyTorch',
             link: 'https://pytorch.org/'
+        },
+        {
+            name: 'Vision',
+            link: 'https://cloud.google.com/vision?hl=en'
         }
+
         
     ]
 

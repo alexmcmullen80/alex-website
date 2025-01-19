@@ -9,6 +9,20 @@ const projects = [
         link: 'https://github.com/alexmcmullen80/Sentiment-Analysis-Model'
     },
     {
+        name: 'Image Recognition with Google Vision AI',
+        description: 'Developed a React-based image search application utilizing the Google Cloud Vision API to label images with descriptive tags. \nImplemented tag-based search functionality, filtering images stored in an Amazon S3 bucket. \nDeployed the application on AWS Amplify.',
+        images: {
+            0: 'Amplify',
+            1: 'JavaScript',
+            2: 'React',
+            3: 'Node',
+            4: 'Vision',
+            5: 'Python',
+
+        },
+        link: 'https://image-recognition.alexmcmullen.ca/'
+    },
+    {
         name: 'TSX Stock Model',
         description: 'Used Yahoo Finance and Finnhub REST APIs to extract 365 days of historical financial data for 9 major stocks in the Toronto Stock Exchange. \nFit historical data to a model with polynomial regression, graphed the resulting data and model with R.',
         images: {
