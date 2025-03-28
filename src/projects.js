@@ -1,5 +1,16 @@
 const projects = [
     {
+        name: 'McMaster/Co-operators Insurance Problem-Solving Competition: Runner-Up',
+        description: 'Led the development of a Poisson regression claim count model used to identify top 5% risks. \nAnalyzed past insurance claim data to identify trends affecting claim frequency. \nPresented findings as a team of 5 to a panel of judges, finishing 2nd out of 30 teams',
+        images: {
+            0: 'Python',
+            1: 'R',
+            2: 'Excel'
+
+        },
+        link: 'https://alexs-public-pdf-bucket.s3.us-east-1.amazonaws.com/Co-operators+Presentation.pdf'
+    },
+    {
         name: 'ML Model Comparison for Sentiment Analysis',
         description: 'Compared the performance of Logistic Regression, Support Vector Machines and Naive Bayes classifiers for a sentiment analysis task. \nAchieved up to 94% accuracy using advanced preprocessing methods and optimized feature selection.',
         images: {

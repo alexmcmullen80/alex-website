@@ -74,6 +74,10 @@ function AboutMe(){
             link: 'https://www.r-project.org/'
         },
         {
+            name: 'Excel',
+            link: 'https://www.microsoft.com/en-ca/microsoft-365/excel'
+        },
+        {
             name: 'PyTorch',
             link: 'https://pytorch.org/'
         },
