@@ -34,6 +34,11 @@ const projects = [
         link: 'https://image-recognition.alexmcmullen.ca/'
     },
     {
+        name: 'OneTwoThreeXOR!',
+        description: 'Invented novel Private Key cryptosystem using the XOR operation. \nCreated encryption and decryption functions used to transfer messages between two users. Performed analysis on security and efficiency of the system using the Known Plaintext Attack (KPA) and Chosen Plaintext Attack (CPA).',
+        link: 'https://alexs-public-pdf-bucket.s3.us-east-1.amazonaws.com/OneTwoThreeXOR!.pdf'
+    },
+    {
         name: 'TSX Stock Model',
         description: 'Used Yahoo Finance and Finnhub REST APIs to extract 365 days of historical financial data for 9 major stocks in the Toronto Stock Exchange. \nFit historical data to a model with polynomial regression, graphed the resulting data and model with R.',
         images: {
