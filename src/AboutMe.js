@@ -1,13 +1,15 @@
-import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
+import { ChakraProvider, SimpleGrid, Button } from "@chakra-ui/react";
 import { Flex, Text , Image, Box} from '@chakra-ui/react';
 import projects from "./projects";
+import { useState } from "react";
+import ProjectGrid from "./ProjectGrid";
 
 
 // function AboutMe(props){
 
 //     props.colourHandler('#3A5A40', '#344E41');
-function AboutMe(){
-    
+const AboutMe = () =>{
+    const [expanded, setExpanded] = useState(false);
     const skills = [
         {
             name: 'PHP',
@@ -96,7 +98,7 @@ function AboutMe(){
             //h={{base:'calc(15vh)', sm:'calc(10vh)', lg:'calc(10vh)'}}
             h='80px'
             minH='40px'
-            minW='400px'
+            minW='390px'
             flexDirection='row'
             justifyContent='space-between'
             alignItems='center'
@@ -109,13 +111,15 @@ function AboutMe(){
             >
 
                 <Flex
-                justifyContent={{base:'space-around', sm: 'space-between', md:'space-between'}}
+                // justifyContent={{base:'space-around', sm: 'space-between', md:'space-between'}}
                 alignItems='center'
+                gap = '10%'
                 w={{base:'30%', sm: '40%', md:'30%'}}
                 //h = '100%'
                 //flexDirection={{base:'column', sm: 'row', md:'row'}}
                 >
                     <a href='#projects'>PROJECTS</a>
+                    <a href='#about-me'>ACADEMICS</a>
                 </Flex>
                 <Flex>
                     <a href='#about-me'>ABOUT ME</a>
@@ -130,7 +134,7 @@ function AboutMe(){
             columns={2}
             spacingX='20%'
             //backgroundColor='#3A5A40'
-            minW='400px'
+            minW='390px'
             id='about-me'
             >
                 <Flex 
@@ -139,7 +143,7 @@ function AboutMe(){
                     marginBottom='5%'
                     
                 >
-                    <Text color='white' as='b' fontSize='15pt' >
+                    <Text color='white' as='b' fontSize='16pt' >
                         About Me
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
@@ -156,106 +160,34 @@ function AboutMe(){
                         In my spare time, I captain an intramural ultimate frisbee team, and assistant captain an intramural hockey team.
                         I also love to travel, hike and play guitar!
                     </Text>
-                    
-                    <Text color='white' as='b' fontSize='15pt' marginTop="5%" marginBottom="5%" id='projects'>
-                        Projects
+                    <Text color='white' as='b' fontSize='16pt' marginTop="5%" id='academics'>
+                        Academics
                     </Text>
-                    <SimpleGrid columns={1} spacing="20px">
-                        {projects.map((project, index) => (
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            <Box
-                                key={index}
-                                position="relative"
-                                w="100%"
-                                h="auto"
-                                textAlign="center"
-                                borderRadius="12px"  
-                                overflow="hidden"
-                                boxShadow= '0 6px 12px rgba(0, 0, 0, 0.2)'
-                                _hover={{ 
-                                    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)', 
-                                    transform: 'scale(1.05)',  
-                                }}
-                                transition="transform 0.3s ease, box-shadow 0.3s ease" 
-                            >
-                                <Box
-                                    w="100%"
-                                    color="white"
-                                    fontSize="12pt"
-                                    padding="15px"
-                                    borderTopRadius="12px"  
-                                    textAlign="left"  
-                                >
-                                    <Text                                    
-                                        as='b'
-                                        fontSize='15pt'
-                                    >   
-                                        {project.name}
-                                    </Text>
-                                    <Text>
-                                        {/* Split the description by '\n' and render each part with <br /> */}
-                                        {project.description.split('\n').map((line, idx) => (
-                                        <span key={idx}>
-                                            {line}
-                                            <br />
-                                        </span>
-                                        ))}
-                                    </Text>
-                                    
-                                    <SimpleGrid minChildWidth="70px" justifyItems="center" spacing  = '15px' templateColumns="repeat(auto-fill, 50px)">
-                                        {Object.values(project.images).map((image, index) => (
-                                                <Box
-                                                    key={index}
-                                                    position="relative"
-                                                    w="70px"
-                                                    h="60px" 
-                                                    textAlign="center"
-                                                    role="group"
-                                                    overflow="hidden"
-                                                >
-                                                    
-                                                    <Image
-                                                        src={require('./Pictures/' + image + '.png')}
-                                                        alt={image}
-                                                        boxSize="30px" 
-                                                        
-                                                        position="absolute"
-                                                        top="50%" //centers the image vertically
-                                                        left="50%" //centers the image horizontally
-                                                        transform="translate(-50%, -50%)" //ensures the image is centered
-                                                        transition="all 0.3s ease"
-                                                        _groupHover={{
-                                                            top: '15px', //moves image to top on hover
-                                                        }}
-                                                    />
-                                                    
-                                                    <Box
-                                                        position="absolute"
-                                                        bottom="10px"
-                                                        w="100%"
-                                                        color="white"
-                                                        fontSize="12px"
-                                                        fontWeight="bold"
-                                                        opacity="0"
-                                                        transition="opacity 0.3s ease"
-                                                        _groupHover={{
-                                                            opacity: 1, //text becomes visible on hover
-                                                        }}
-                                                    >
-                                                        {image}
-                                                    </Box>
-                                                </Box>
-                                        ))}
-                                    </SimpleGrid>
-                                    
-                                </Box>
-                            
-                                
-                                    
-                            </Box>
-                            </a>
-                        ))}
-                    </SimpleGrid>
+                    <Flex marginTop='2%' justifyContent="space-between">
+                        <Text color='white' fontSize='12pt'>
+                            <b>McMaster University</b> 
+                        </Text>
+                        <Text color='white' as='i' fontSize='12pt'>
+                            2021 - present
+                        </Text>
+                    </Flex>
+                    
+                    <Text color='white' as='i'fontSize='12pt' marginTop='1%'>
+                        <a href='https://academiccalendars.romcmaster.ca/preview_program.php?catoid=56&poid=28253&returnto=11346' target="_blank" rel="noopener noreferrer">
+                            Honours Bachelor of Science in Mathematics and Computer Science
+                        </a>
+                    </Text>
+
+                    <Text color='white' fontSize='12pt' marginTop="2%">
+                        <b>3.94 CGPA - top 15%</b> in program
+                    </Text>
+
+                    <Text color='white' fontSize='12pt' marginTop="2%">
+                        3x Dean's Honour List (2022, 2023, 2024)
+                    </Text>
+                    
+                    <ProjectGrid projects={projects} expanded={expanded} />
+
 
 
 
