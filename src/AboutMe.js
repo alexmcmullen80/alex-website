@@ -148,17 +148,20 @@ const AboutMe = () =>{
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
                         Hi there! I am a fourth year Math and Computer Science student at McMaster University.
-                        I've always enjoyed challenging myself for the better, which is exactly what I did with this website.
+                        I am a Software Developer with experience in both front-end and back-end technologies, always eager to learn and grow.
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
-                        Throughout my school and work experience, I have gained various technical skills over the years.
+                        I have a strong passion for data science and machine learning and am excited to gain hands-on experience in these fields. 
+                        I enjoy tackling complex problems, building efficient solutions, and continuously expanding my skill set.
+
+                        Throughout my school and work experience, I have gained various technical skills.
                         However, many of the tools/frameworks used to build this website were new to me, so I taught myself how to use them. 
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
                         Additionally, I am a huge sports fan! 
-                        I love playing many sports, including hockey, ultimate frisbee, golf, soccer, badminton etc.
-                        In my spare time, I captain an intramural ultimate frisbee team, and assistant captain an intramural hockey team.
-                        I also love to travel, hike and play guitar!
+                        I love playing just about any sport, including hockey, ultimate frisbee, golf, soccer, badminton etc.
+                        Over the years, I have continued to be a captain of many sports teams, which has strengthened my leadership and teamwork skills.
+                        In my free time, I enjoy traveling, hiking, and playing guitar.
                     </Text>
                     <Text color='white' as='b' fontSize='16pt' marginTop="5%" id='academics'>
                         Academics
