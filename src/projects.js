@@ -8,7 +8,7 @@ const projects = [
             2: 'Excel'
 
         },
-        link: 'https://alexs-public-pdf-bucket.s3.us-east-1.amazonaws.com/Co-operators+Presentation.pdf'
+        link: 'https://github.com/alexmcmullen80/Co-operators-Case-Competition/blob/main/loss_model.ipynb'
     },
     {
         name: 'ML Model Comparison for Sentiment Analysis',
