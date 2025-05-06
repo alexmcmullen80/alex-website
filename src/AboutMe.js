@@ -347,9 +347,9 @@ const AboutMe = () =>{
                     </Text>
                     <SimpleGrid w="75%" minChildWidth="70px" justifyItems="center">
                         {skills.map((skill, index) => (
-                            <a href={skill.link} target="_blank" rel="noopener noreferrer">
+                            <a href={skill.link} target="_blank" rel="noopener noreferrer" key={index}>
                                 <Box
-                                    key={index}
+                                    
                                     position="relative"
                                     w="70px"
                                     h="60px" 
