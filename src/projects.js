@@ -11,6 +11,14 @@ const projects = [
         link: 'https://github.com/alexmcmullen80/Co-operators-Case-Competition/blob/main/loss_model.ipynb'
     },
     {
+        name: 'Digital Gold or Fool\'s Gold? Bitcoin as an Inflation Hedge',
+        description: 'Evaluated Bitcoin\'s role as an inflation hedge by analyzing historical performance and return correlations between Bitcoin, Gold, S&P 500 and inflation (CPI) from 2015-2025. \nAssessed predictive relationships between assets and inflation through Granger causality testing. \nCompared performance of optimal portfolios under uncertainty using the Sharpe Ratio and 100 Monte Carlo Simulations over 252 days. \nConcluded Bitcoin does not hedge inflation but improves diversification and risk-adjusted returns.',
+        images: {
+            0: 'Python'
+        },
+        link: 'https://app.hex.tech/01970e0f-8afe-7112-b095-d6b0a5d5e818/app/01970e44-e38d-7113-884a-2d30c7384e28/latest'
+    },
+    {
         name: 'ML Model Comparison for Sentiment Analysis',
         description: 'Compared the performance of Logistic Regression, Support Vector Machines and Naive Bayes classifiers for a sentiment analysis task. \nAchieved up to 94% accuracy using advanced preprocessing methods and optimized feature selection.',
         images: {
