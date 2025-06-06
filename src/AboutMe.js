@@ -1,4 +1,4 @@
-import { ChakraProvider, SimpleGrid, Button } from "@chakra-ui/react";
+import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
 import { Flex, Text , Image, Box} from '@chakra-ui/react';
 import projects from "./projects";
 import { useState } from "react";
@@ -12,8 +12,16 @@ const AboutMe = () =>{
     const [expanded, setExpanded] = useState(false);
     const skills = [
         {
-            name: 'PHP',
-            link: 'https://www.php.net/'
+            name: 'Python',
+            link: 'https://www.python.org/'
+        },
+        {
+            name: 'PyTorch',
+            link: 'https://pytorch.org/'
+        },
+        {
+            name: 'Scikit-learn',
+            link: 'https://scikit-learn.org/stable/'
         },
         {
             name: 'MySQL',
@@ -24,12 +32,40 @@ const AboutMe = () =>{
             link: 'https://www.postgresql.org/'
         },
         {
-            name: 'Azure',
-            link: 'https://azure.microsoft.com/en-ca'
+            name: 'R',
+            link: 'https://www.r-project.org/'
         },
         {
-            name: 'Amplify',
-            link: 'https://aws.amazon.com/amplify/'
+            name: 'JavaScript',
+            link: 'https://www.javascript.com/'
+        },
+        {
+            name: 'Typescript',
+            link: 'https://www.typescriptlang.org/'
+        },
+        {
+            name: 'AWS',
+            link: 'https://aws.amazon.com/'
+        },
+        {
+            name: 'Cloud',
+            link: 'https://cloud.google.com/?hl=en'
+        },
+        {
+            name: 'Java',
+            link: 'https://www.java.com/en/'
+        },
+        {
+            name: 'PHP',
+            link: 'https://www.php.net/'
+        },
+        {
+            name: 'HTML',
+            link: 'https://html.spec.whatwg.org/'
+        },
+        {
+            name: 'CSS',
+            link: 'https://w3.org/Style/CSS/Overview.en.html'
         },
         {
             name: 'Docker',
@@ -44,49 +80,31 @@ const AboutMe = () =>{
             link: 'https://nodejs.org/en'
         },
         {
-            name: 'HTML',
-            link: 'https://html.spec.whatwg.org/'
-        },
-        {
-            name: 'CSS',
-            link: 'https://w3.org/Style/CSS/Overview.en.html'
-        },
-        {
-            name: 'JavaScript',
-            link: 'https://www.javascript.com/'
-        },
-        {
             name: 'React',
             link: 'https://react.dev/'
-        },
-        {
-            name: 'Java',
-            link: 'https://www.java.com/en/'
-        },
-        {
-            name: 'Python',
-            link: 'https://www.python.org/'
-        },
-        {
-            name: 'C++',
-            link: 'https://isocpp.org/get-started'
-        },
-        {
-            name: 'R',
-            link: 'https://www.r-project.org/'
         },
         {
             name: 'Excel',
             link: 'https://www.microsoft.com/en-ca/microsoft-365/excel'
         },
-        {
-            name: 'PyTorch',
-            link: 'https://pytorch.org/'
-        },
-        {
-            name: 'Vision',
-            link: 'https://cloud.google.com/vision?hl=en'
-        }
+        // {
+        //     name: 'Amplify',
+        //     link: 'https://aws.amazon.com/amplify/'
+        // },
+        // {
+        //     name: 'Vision',
+        //     link: 'https://cloud.google.com/vision?hl=en'
+        // },
+        // {
+        //     name: 'C++',
+        //     link: 'https://isocpp.org/get-started'
+        // },
+        
+        
+
+
+
+        
 
         
     ]
