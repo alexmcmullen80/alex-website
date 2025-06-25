@@ -165,7 +165,7 @@ const AboutMe = () =>{
                         About Me
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
-                        Hi there! I am a fourth year Math and Computer Science student at McMaster University.
+                        Hi there! I am a Math and Computer Science New Grad from McMaster University.
                         I am a Software Developer with experience in both front-end and back-end technologies, always eager to learn and grow.
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
@@ -189,7 +189,7 @@ const AboutMe = () =>{
                             <b>McMaster University</b> 
                         </Text>
                         <Text color='white' as='i' fontSize='12pt'>
-                            2021 - present
+                            2021 - 2025
                         </Text>
                     </Flex>
                     
@@ -200,11 +200,7 @@ const AboutMe = () =>{
                     </Text>
 
                     <Text color='white' fontSize='12pt' marginTop="2%">
-                        <b>3.94 CGPA - top 15%</b> in program
-                    </Text>
-
-                    <Text color='white' fontSize='12pt' marginTop="2%">
-                        3x Dean's Honour List (2022, 2023, 2024)
+                        <b>3.94 CGPA - Summa Cum Laude</b>
                     </Text>
                     
                     <ProjectGrid projects={projects} expanded={expanded} />
@@ -228,7 +224,7 @@ const AboutMe = () =>{
                         Alex McMullen
                     </Text>
                     <Text color='white'fontSize='12pt' textAlign='center' marginTop='2%'>
-                        Mathematics and Computer Science at McMaster University
+                        Mathematics and Computer Science New Grad from McMaster University
                     </Text>
                     <Flex 
                         justifyContent='center'
