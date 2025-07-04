@@ -215,10 +215,12 @@ const AboutMe = () =>{
                     alignItems="center"
                 >
                     <Image
-                        src = {require('./Pictures/profile.jpg')}
+                        // src = {require('./Pictures/profile.jpg')}
+                        src = {require('./Pictures/gradphoto.jpg')}
                         borderRadius='full'
                         boxSize='200px'
                         objectFit = 'cover' 
+                        objectPosition="80% 23%"
                     />
                     <Text color='white' as='b' fontSize='15pt' textAlign='center' marginTop='2%'>
                         Alex McMullen
