@@ -8,7 +8,7 @@ const projects = [
             2: 'Excel'
 
         },
-        link: 'https://github.com/alexmcmullen80/Co-operators-Case-Competition/blob/main/loss_model.ipynb'
+        link: 'https://app.hex.tech/01970e0f-8afe-7112-b095-d6b0a5d5e818/app/0197ae31-8e6b-7001-8208-1c34cd47fa72/latest'
     },
     {
         name: 'Digital Gold or Fool\'s Gold? Bitcoin as an Inflation Hedge',
