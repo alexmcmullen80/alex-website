@@ -1,7 +1,6 @@
 import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
-import { Flex, Text , Image, Box} from '@chakra-ui/react';
+import { Flex, Text , Image, Box, Stack} from '@chakra-ui/react';
 import projects from "./projects";
-import { useState } from "react";
 import ProjectGrid from "./ProjectGrid";
 
 
@@ -9,7 +8,6 @@ import ProjectGrid from "./ProjectGrid";
 
 //     props.colourHandler('#3A5A40', '#344E41');
 const AboutMe = () =>{
-    const [expanded, setExpanded] = useState(false);
     const skills = [
         {
             name: 'Python',
@@ -47,10 +45,10 @@ const AboutMe = () =>{
             name: 'AWS',
             link: 'https://aws.amazon.com/'
         },
-        {
-            name: 'Cloud',
-            link: 'https://cloud.google.com/?hl=en'
-        },
+        // {
+        //     name: 'Cloud',
+        //     link: 'https://cloud.google.com/?hl=en'
+        // },
         {
             name: 'Java',
             link: 'https://www.java.com/en/'
@@ -136,8 +134,10 @@ const AboutMe = () =>{
                 //h = '100%'
                 //flexDirection={{base:'column', sm: 'row', md:'row'}}
                 >
+                    
+                    <a href='#academics'>ACADEMICS</a>
+                    <a href='#work'>EXPERIENCE</a>
                     <a href='#projects'>PROJECTS</a>
-                    <a href='#about-me'>ACADEMICS</a>
                 </Flex>
                 <Flex>
                     <a href='#about-me'>ABOUT ME</a>
@@ -145,13 +145,16 @@ const AboutMe = () =>{
                 
 
             </Flex>
+            {/* <Stack> */}
             <SimpleGrid 
             
-            minChildWidth='300px'
-            padding='5% 5% 7% 5%'
-            columns={2}
+            // minChildWidth='300px'
+            padding='5% 5% 0% 5%'
+            columns={{ base: 1, md: 2, lg: 2, xl: 2 }}
+            // maxW="1920px"
             spacingX='20%'
             //backgroundColor='#3A5A40'
+            // spacing = {4}
             minW='390px'
             id='about-me'
             >
@@ -159,6 +162,7 @@ const AboutMe = () =>{
                     flexDirection="column"
                     alignItems="left"
                     marginBottom='5%'
+                    order={{ base: 2, md: 1 }}
                     
                 >
                     <Text color='white' as='b' fontSize='16pt' >
@@ -203,7 +207,7 @@ const AboutMe = () =>{
                         <b>3.94 CGPA - Summa Cum Laude</b>
                     </Text>
                     
-                    <ProjectGrid projects={projects} expanded={expanded} />
+                    {/* <ProjectGrid projects={projects} expanded={expanded} /> */}
 
 
 
@@ -213,6 +217,7 @@ const AboutMe = () =>{
                 <Flex 
                     flexDirection="column"
                     alignItems="center"
+                    order={{ base: 1, md: 2 }}
                 >
                     <Image
                         // src = {require('./Pictures/profile.jpg')}
@@ -414,7 +419,89 @@ const AboutMe = () =>{
 
 
                 </Flex>
+                <Stack order={{ base: 3, md: 3 }} id='work'>
+                    <Text color='white' as='b' fontSize='16pt' marginTop="5%">
+                        Work Experience
+                    </Text>
+                    <Stack 
+                        marginBottom={'2%'} 
+                        boxShadow="0 6px 12px rgba(0, 0, 0, 0.2)"
+                        borderRadius="12px"
+                        padding="15px">
+                        
+                        <Flex marginTop='2%' justifyContent="space-between">
+                            <Text color='white' fontSize='12pt'>
+                                <b>Junior Software Developer</b>, 
+                                <i>
+                                    <a href='https://www.analytixlive.com/' target="_blank" rel="noopener noreferrer">
+                                    &nbsp; AnalytixLive
+                                    </a>
+                                </i> 
+                            </Text>
+                            <Text color='white' as='i' fontSize='12pt'>
+                                May 2025 - Present
+                            </Text>
+                        </Flex>
+                        <Text sx={{
+                            p: {
+                            fontSize: "12pt",
+                            color: "white",
+                            marginBottom: 3,  // spacing between paragraphs
+                            },
+                            "p:last-child": {
+                            marginBottom: 0,
+                            },
+                        }}>
+                            <p>- Developed a <b>Neural Network</b> based model using <b>PyTorch</b> to forecast daily ticket sales for upcoming performances, enabling stakeholders to make data-driven pricing decisions</p>
+                            <p>- Built an end-to-end full stack web application using <b>React (Typescript)</b> and <b>Flask</b> to enable stakeholders to query data using natural language</p>
+                            <p>- Integrated <b>Google Gemini</b> with <b>LangChain</b> and <b>RAG (Retrieval Augmented Generation)</b> to dynamically translate user questions into SQL, allowing seamless database interaction without technical knowledge</p>
+                            <p>- Implemented token based authentication to securely manage API access between frontend and backend</p>
+                            <p>- Proactively built a <b>CI/CD</b> pipeline using <b>GitHub Actions</b> to a Windows server, significantly improving deployment reliability and speed while eliminating manual updates</p>
+                            <p>- Saved the company over <b>$2000</b> in contractor costs by creating a <b>Python</b> script to automate downloading objects from <b>AWS S3</b> using the <b>boto3</b> SDK</p>
+                        </Text>
+                    </Stack>
+                    <Stack 
+                        marginBottom={'2%'} 
+                        boxShadow="0 6px 12px rgba(0, 0, 0, 0.2)"
+                        borderRadius="12px"
+                        padding="15px">
+                        
+                        <Flex marginTop='2%' justifyContent="space-between">
+                            <Text color='white' fontSize='12pt'>
+                                <b>Software Developer Intern</b>, 
+                                <i>
+                                    <a href='https://www.analytixlive.com/' target="_blank" rel="noopener noreferrer">
+                                    &nbsp; AnalytixLive
+                                    </a>
+                                </i> 
+                            </Text>
+                            <Text color='white' as='i' fontSize='12pt'>
+                                May 2021 - Aug. 2024
+                            </Text>
+                        </Flex>
+                        <Text sx={{
+                            p: {
+                            fontSize: "12pt",
+                            color: "white",
+                            marginBottom: 3,  // spacing between paragraphs
+                            },
+                            "p:last-child": {
+                            marginBottom: 0,
+                            },
+                        }}>
+                            <p>- Achieved seamless extraction, cleaning, and storage of <b>millions</b> of rows of data daily for over 25 clients in the performing arts industry through automated workflows using <b>MySQL</b></p>
+                            <p>- Developed and maintained a full stack website that streamlined internal workflows, saving the company ~<b>5</b> hours/week using <b>PHP, MySQL, HTML, CSS, JavaScript</b> and <b>IIS</b></p>
+                            <p>- Saved <b>2+ hours</b> of SQL query execution time using <b>indexes</b> and <b>efficient execution plans</b></p>
+                            <p>- Automated execution of over <b>20 SQL</b> tasks through batch scripting using Windows System Scheduler</p>
+                        </Text>
+                    </Stack>
+
+                </Stack>
+                <Box order={{ base: 4, md: 4 }}>
+                    <ProjectGrid projects={projects} />
+                </Box>
             </SimpleGrid>
+            
         </ChakraProvider>
     )
 
