@@ -169,15 +169,13 @@ const AboutMe = () =>{
                         About Me
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
-                        Hi there! I am a Math and Computer Science New Grad from McMaster University.
-                        I am a Software Developer with experience in both front-end and back-end technologies, always eager to learn and grow.
+                        Hi there! I am a New Grad from McMaster University with a degree in Mathematics and Computer Science. 
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
-                        I have a strong passion for data science and machine learning and am excited to gain hands-on experience in these fields. 
-                        I enjoy tackling complex problems, building efficient solutions, and continuously expanding my skill set.
-
-                        Throughout my school and work experience, I have gained various technical skills.
-                        However, many of the tools/frameworks used to build this website were new to me, so I taught myself how to use them. 
+                        With experience developing complex data pipelines using Python and SQL, 
+                        I'm excited about using data science and machine learning to tackle real world business problems through predictive modeling. 
+                        Some interesting side projects I have worked on include using statistical analysis to trade the spread between Nvidia and AMD stock, 
+                        as well as evaluating Bitcoin's role as an inflation hedge and portfolio performance booster. 
                     </Text>
                     <Text color='white' fontSize='12pt' marginTop='5%'>
                         Additionally, I am a huge sports fan! 
@@ -204,7 +202,7 @@ const AboutMe = () =>{
                     </Text>
 
                     <Text color='white' fontSize='12pt' marginTop="2%">
-                        <b>3.94 CGPA - Summa Cum Laude</b>
+                        <b>3.94 GPA - Summa Cum Laude</b>
                     </Text>
                     
                     {/* <ProjectGrid projects={projects} expanded={expanded} /> */}
