@@ -450,7 +450,8 @@ const AboutMe = () =>{
                             marginBottom: 0,
                             },
                         }}>
-                            <p>- Developed a <b>Neural Network</b> based model using <b>PyTorch</b> to forecast daily ticket sales for upcoming performances, enabling stakeholders to make data-driven pricing decisions</p>
+                            <p>- Currently developing a <b>Neural Network</b> based model using <b>PyTorch</b> to forecast daily ticket sales for upcoming performances, enabling stakeholders to make data-driven pricing decisions</p>
+                            <p>- Built an interactive <b>Power BI</b> dashboard to visualize model performance, helping executives evaluate accuracy, bias, and business impact</p>
                             <p>- Built an end-to-end full stack web application using <b>React (Typescript)</b> and <b>Flask</b> to enable stakeholders to query data using natural language</p>
                             <p>- Integrated <b>Google Gemini</b> with <b>LangChain</b> and <b>RAG (Retrieval Augmented Generation)</b> to dynamically translate user questions into SQL, allowing seamless database interaction without technical knowledge</p>
                             <p>- Implemented token based authentication to securely manage API access between frontend and backend</p>
