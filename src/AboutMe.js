@@ -450,8 +450,9 @@ const AboutMe = () =>{
                             marginBottom: 0,
                             },
                         }}>
-                            <p>- Developed a ML-based ticket sales forecasting model combining gradient boosting (<b>LightGBM</b>) and deep learning (<b>PyTorch</b>), enabling stakeholders to make data-driven pricing decisions</p>
+                            <p>- Developed a new ML-based ticket sales forecasting model using <b>Python</b> and <b>LightGBM</b>, improving model fit by <b>23%</b></p>
                             <p>- Built an interactive <b>Tableau</b> dashboard to visualize model performance, helping executives evaluate accuracy, bias, and business impact</p>
+                            <p>- Migrated production <b>ETL</b> pipelines to <b>Databricks</b> using <b>Apache Spark</b>, optimizing compute costs and simplifying pipeline maintenance</p>
                             <p>- Improved client engagement and collaboration by implementing a commenting feature within a <b>Tableau</b> dashboard</p>
                             <p>- Built an end-to-end full stack web application using <b>React (Typescript)</b> and <b>Flask</b> to enable stakeholders to query data using natural language</p>
                             <p>- Integrated <b>Google Gemini</b> with <b>LangChain</b> and <b>RAG (Retrieval Augmented Generation)</b> to dynamically translate user questions into SQL, allowing seamless database interaction without technical knowledge</p>
@@ -490,6 +491,7 @@ const AboutMe = () =>{
                             },
                         }}>
                             <p>- Achieved seamless extraction, cleaning, and storage of <b>millions</b> of rows of data daily for over 25 clients in the performing arts industry through automated workflows using <b>MySQL</b></p>
+                            <p>- Responded to ad-hoc data requests by querying relational databases using <b>SQL</b> to answer business-critical questions</p>
                             <p>- Developed and maintained a full stack website that streamlined internal workflows, saving the company ~<b>5</b> hours/week using <b>PHP, MySQL, HTML, CSS, JavaScript</b> and <b>IIS</b></p>
                             <p>- Saved <b>2+ hours</b> of SQL query execution time using <b>indexes</b> and <b>efficient execution plans</b></p>
                             <p>- Automated execution of over <b>20 SQL</b> tasks through batch scripting using Windows System Scheduler</p>

@@ -13,6 +13,15 @@ const projects = [
         link: 'https://app.hex.tech/01970e0f-8afe-7112-b095-d6b0a5d5e818/app/0197ae31-8e6b-7001-8208-1c34cd47fa72/latest'
     },
     {
+        name: 'Daily Market Data Lakehouse on Databricks',
+        description: '- Built an ETL pipeline in Databricks that ingests daily stock market data from the Alpaca Markets API \n- Cleaned and curated financial time-series data using PySpark and Spark SQL across Bronze, Silver and Gold layers in a medallion architecture \n- Scheduled and orchestrated daily ETL runs using a DAG in Databricks Jobs',
+        images: {
+            0: 'Python',
+            1: 'Git'
+        },
+        link: 'https://github.com/alexmcmullen80/Stock-Prices'
+    },
+    {
         name: 'Pairs Trading with Mean Reversion',
         description: '- Developed and backtested a statistical pairs trading strategy using Python and the Alpaca Markets API \n- Tested for cointegration and stationarity of the spread between NVDA and AMD stock \n- Calculated performance metrics including annualized Sharpe ratio, cumulative returns and risk',
         images: {
