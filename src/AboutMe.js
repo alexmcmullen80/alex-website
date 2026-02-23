@@ -450,15 +450,13 @@ const AboutMe = () =>{
                             marginBottom: 0,
                             },
                         }}>
-                            <p>- Developed a new ML-based ticket sales forecasting model using <b>Python</b> and <b>LightGBM</b>, improving model fit by <b>23%</b></p>
-                            <p>- Built an interactive <b>Tableau</b> dashboard to visualize model performance, helping executives evaluate accuracy, bias, and business impact</p>
-                            <p>- Migrated production <b>ETL</b> pipelines to <b>Databricks</b> using <b>Apache Spark</b>, optimizing compute costs and simplifying pipeline maintenance</p>
-                            <p>- Improved client engagement and collaboration by implementing a commenting feature within a <b>Tableau</b> dashboard</p>
-                            <p>- Built an end-to-end full stack web application using <b>React (Typescript)</b> and <b>Flask</b> to enable stakeholders to query data using natural language</p>
-                            <p>- Integrated <b>Google Gemini</b> with <b>LangChain</b> and <b>RAG (Retrieval Augmented Generation)</b> to dynamically translate user questions into SQL, allowing seamless database interaction without technical knowledge</p>
-                            <p>- Implemented token based authentication to securely manage API access between frontend and backend</p>
-                            <p>- Proactively built a <b>CI/CD</b> pipeline using <b>GitHub Actions</b> to a Windows server, significantly improving deployment reliability and speed while eliminating manual updates</p>
-                            <p>- Saved the company over <b>$2000</b> in contractor costs by creating a <b>Python</b> script to automate downloading objects from <b>AWS S3</b> using the <b>boto3</b> SDK</p>
+                            <p>- Developed a new ticket sales regression model (LightGBM) improving MAE by <b>29%</b>, enabling more accurate revenue projections and optimized pricing strategies across <b>3500+</b> performances per year</p>
+                            <p>- Migrated and optimized <b>25+</b> production batch ETL pipelines processing <b>7M+</b> records daily to Databricks using PySpark and SQL, reducing costs by <b>50%</b> and pipeline run times by <b>25%</b></p>
+                            <p>- Created automated ingestion pipelines integrating <b>~13GB</b> of data daily from FTPS, SFTP and AWS S3 sources, processing data into staging layers for downstream analytics and ML workloads</p>
+                            <p>- Communicated complex technical concepts and business insights to non-technical stakeholders, enabling data-driven decision making</p>
+                            <p>- Built an end-to-end full stack web application using React (Typescript) and Flask to enable stakeholders to query data using natural language</p>
+                            <p>- Integrated Google Gemini with LangChain and RAG (Retrieval Augmented Generation) to dynamically translate user questions into SQL, allowing seamless database interaction without technical knowledge</p>
+                            <p>- Proactively built a CI/CD pipeline using GitHub Actions to a Windows server, significantly improving deployment reliability and speed while eliminating manual updates</p>
                         </Text>
                     </Stack>
                     <Stack 
@@ -490,11 +488,11 @@ const AboutMe = () =>{
                             marginBottom: 0,
                             },
                         }}>
-                            <p>- Achieved seamless extraction, cleaning, and storage of <b>millions</b> of rows of data daily for over 25 clients in the performing arts industry through automated workflows using <b>MySQL</b></p>
-                            <p>- Responded to ad-hoc data requests by querying relational databases using <b>SQL</b> to answer business-critical questions</p>
-                            <p>- Developed and maintained a full stack website that streamlined internal workflows, saving the company ~<b>5</b> hours/week using <b>PHP, MySQL, HTML, CSS, JavaScript</b> and <b>IIS</b></p>
-                            <p>- Saved <b>2+ hours</b> of SQL query execution time using <b>indexes</b> and <b>efficient execution plans</b></p>
-                            <p>- Automated execution of over <b>20 SQL</b> tasks through batch scripting using Windows System Scheduler</p>
+                            <p>- Developed and maintained ETL pipelines to automate data ingestion, cleaning and transformation for millions of rows of data daily using MySQL</p>
+                            <p>- Responded to ad-hoc data requests by querying relational databases using SQL to answer business-critical questions</p>
+                            <p>- Saved <b>2+</b> hours per week of SQL query execution time using indexes and efficient execution plans</p>
+                            <p>- Automated execution of over <b>20</b> SQL tasks through batch scripting using Windows System Scheduler</p>
+                            <p>- Developed and maintained a full stack website that streamlined internal workflows, saving the company ~<b>3</b> hours/week using PHP, MySQL, HTML, CSS, JavaScript and IIS</p>
                         </Text>
                     </Stack>
 
